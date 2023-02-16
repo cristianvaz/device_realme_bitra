@@ -59,6 +59,9 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSystemUIResTarget
 
+# Override  OTA assert
+TARGET_OTA_ASSERT_DEVICE := bitra,RE879AL1
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/realme/bitra
