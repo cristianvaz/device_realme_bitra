@@ -18,16 +18,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common PixelOS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_PIXEL_CHARGER := true
+# Inherit some common Blaze stuff
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_bitra
+PRODUCT_NAME := blaze_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3370
@@ -37,6 +35,13 @@ PRODUCT_SYSTEM_NAME := RMX3370
 PRODUCT_SYSTEM_DEVICE := RE879AL1
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
+
+# Blaze flags
+WITH_GAPPS := true
+BLAZE_MAINTAINER := cristianvaz
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_USE_PIXEL_CHARGER := true
+TARGET_SUPPORTS_BLUR := true
 
 TARGET_BOOT_ANIMATION_RES := 1080
 

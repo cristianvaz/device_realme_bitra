@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bitra.mk
+    $(LOCAL_DIR)/blaze_bitra.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_bitra-user \
-    aosp_bitra-userdebug \
-    aosp_bitra-eng
+    blaze_bitra-user \
+    blaze_bitra-userdebug \
+    blaze_bitra-eng
